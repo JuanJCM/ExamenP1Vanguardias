@@ -12,8 +12,11 @@
                         <th>Cantidad</th>
                         <th>Fecha</th>
                     </thead>
-                    <tr>
-                        
+                    <tr *ngIf="items">
+                        <td>{{NombreCuenta(items.AccountId)}}</td>
+                        <td>{{items.Description}}</td>
+                        <td>{{items.Amount}}</td>
+                        <td>{{items.TransactionDate}}</td>
                     </tr>
                 </div>
             </div>

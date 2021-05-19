@@ -11,7 +11,10 @@
                         <th>Cantidad</th>
                     </thead>
                     <tbody>
-                        
+                        <tr *ngIf ="items">
+                            <td>{{items.Name}}</td>
+                            <td>{{items.Amount | currency:items.Currency:'symbol'</td>
+                        </tr>
                     </tbody>
                 </div>
             </div>

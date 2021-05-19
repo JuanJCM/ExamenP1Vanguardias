@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Accounts } from '../shared/models/Accounts';
 
 @Component({
   selector: 'app-cuenta-lista',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cuenta-lista.component.css']
 })
 export class CuentaListaComponent implements OnInit {
-
+  items !: Accounts;
   constructor() { }
 
   ngOnInit(): void {

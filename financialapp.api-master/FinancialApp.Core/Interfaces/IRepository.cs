@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FinancialApp.Infrastructure.Repositories
+namespace FinancialApp.Core.Interfaces
 {
     public interface IRepository<TEntity>
     {
-        TEntity Filter();
-        TEntity Find();
+        IReadOnlyList<TEntity> Get();
+        TEntity Create(TEntity entity);
     }
 }

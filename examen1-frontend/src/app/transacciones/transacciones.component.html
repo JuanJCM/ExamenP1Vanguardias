@@ -12,11 +12,11 @@
                         <th>Cantidad</th>
                         <th>Fecha</th>
                     </thead>
-                    <tr *ngIf="items">
-                        <td>{{NombreCuenta(items.AccountId)}}</td>
-                        <td>{{items.Description}}</td>
-                        <td>{{items.Amount}}</td>
-                        <td>{{items.TransactionDate}}</td>
+                    <tr *ngFor = "let item of items">
+                        <td>{{NombreCuenta(item.AccountId)}}</td>
+                        <td>{{item.Description}}</td>
+                        <td [ngStyle]= "{'color':(item.Amount > 0 ? 'green': 'red')}">{{item.Amount | currency: CurrencyState(item.AccountId):'symbol'}}</td>
+                        <td>{{item.TransactionDate}}</td>
                     </tr>
                 </div>
             </div>

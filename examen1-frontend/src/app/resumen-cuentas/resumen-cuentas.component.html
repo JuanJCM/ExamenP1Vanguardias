@@ -10,7 +10,7 @@
             <p [ngStyle] = "{'color' : 'red'}">
                 {{expenses}}
             </p>
-            <p >
+            <p [ngStyle]= "{'color':(total > 0 ? 'green': 'red')}">
                 {{total}}
             </p>
         </div>

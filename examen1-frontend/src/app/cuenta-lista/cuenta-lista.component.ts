@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountMocks } from '../shared/mocks/AccountMocks';
 import { Accounts } from '../shared/models/Accounts';
 
 @Component({
@@ -7,10 +8,11 @@ import { Accounts } from '../shared/models/Accounts';
   styleUrls: ['./cuenta-lista.component.css']
 })
 export class CuentaListaComponent implements OnInit {
-  items !: Accounts;
+  items !: Accounts[];
   constructor() { }
 
   ngOnInit(): void {
+    this.items = AccountMocks;
   }
 
 }

@@ -5,13 +5,13 @@
         </h2>
         <div class="card-text">
             <p [ngStyle] = "{'color' : 'green'}">
-                {{income}}
+                Income: {{income | currency}}
             </p>
             <p [ngStyle] = "{'color' : 'red'}">
-                {{expenses}}
+                Expenses: {{expenses | currency}}
             </p>
             <p [ngStyle]= "{'color':(total > 0 ? 'green': 'red')}">
-                {{total}}
+               Total: {{total| currency}}
             </p>
         </div>
     </div>

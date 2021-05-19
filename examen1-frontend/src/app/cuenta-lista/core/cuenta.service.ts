@@ -10,6 +10,6 @@ export class CuentaService {
   constructor(private httpClient: HttpClient) { }
 
   getPosts() : Observable<Transactions[]>{
-
+    return this.httpClient.get<Transactions[]>('${this.baseUrl}/');
   }
 }

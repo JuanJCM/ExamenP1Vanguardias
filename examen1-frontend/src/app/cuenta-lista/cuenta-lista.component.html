@@ -11,9 +11,9 @@
                         <th>Cantidad</th>
                     </thead>
                     <tbody>
-                        <tr *ngIf ="items">
-                            <td>{{items.Name}}</td>
-                            <td>{{items.Amount | currency:items.Currency:'symbol'</td>
+                        <tr *ngFor = "let item of items">
+                            <td>{{item.Name}}</td>
+                            <td>{{item.Amount | currency:item.Currency:'symbol'}}</td>
                         </tr>
                     </tbody>
                 </div>

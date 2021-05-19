@@ -7,7 +7,7 @@ import { ResumenCuentasComponent } from './resumen-cuentas/resumen-cuentas.compo
 import { HomePageComponent } from './home-page/home-page.component';
 import { CuentaListaComponent } from './cuenta-lista/cuenta-lista.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
-
+import {HttpClient} from"@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,

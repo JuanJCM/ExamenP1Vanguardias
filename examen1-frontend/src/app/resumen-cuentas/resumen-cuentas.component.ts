@@ -26,12 +26,14 @@ export class ResumenCuentasComponent implements OnInit {
 
   Llenador() {
     this.items.forEach((item) => {
-      var proratio = this.accounts?.find(p => p.Id== item.AccountId);
-      this.ratio != proratio?.ConversionRate;
+      var proratio = this.accounts?.find(p => p.Id== item.AccountId)?.ConversionRate;
       if(item.Amount >0)
-         this.income = this.income +(item.Amount * this.ratio );
-      else
-        this.expenses = this.expenses + (item.Amount * this.ratio);
+        if(proratio)
+         this.income = this.income +(item.Amount * proratio );
+      else{
+        if(proratio)
+        this.expenses = this.expenses + (item.Amount * proratio);
+      }
     })
     this.total = this.income + this.expenses;
   }

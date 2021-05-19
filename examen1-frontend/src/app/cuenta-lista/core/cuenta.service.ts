@@ -9,7 +9,7 @@ export class CuentaService {
   baseUrl: string=  "http://localhost:64439";
   constructor(private httpClient: HttpClient) { }
 
-  getPosts() : Observable<Transactions[]>{
-    return this.httpClient.get<Transactions[]>('${this.baseUrl}/');
+  getPosts() : Observable<Account[]>{
+    return this.httpClient.get<Account[]>('${this.baseUrl}/');
   }
 }
